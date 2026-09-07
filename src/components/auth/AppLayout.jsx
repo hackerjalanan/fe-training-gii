@@ -2,23 +2,14 @@ import React, { useState, useEffect} from 'react';
 import { Link, useNavigate, useLocation  } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import {
-  Menu,
-  X,
   CalendarCheck ,
-  ChevronDown,
   Activity,
   Inbox, LogOut , User, ChevronUp,
-  Layout,
-  Dashboard,
-  FileText,
   Users,
-  BarChart,
   Home,
   Send,
   UserCheck,
-  GraduationCap,
-  UserCog,
-  NotebookPen
+  GraduationCap
 } from 'lucide-react';
 
 import ProfilePopup from "./Profil-page";
@@ -220,7 +211,6 @@ const AppLayout = ({ children }) => {
     return () => (document.body.style.overflow = 'auto');
   }, [sidebarOpen, isMobile]);
 
-  const toggleSidebar = () => setSidebarOpen(prev => !prev);
   const toggleDropdown = () => setDropdownOpen(prev => !prev);
 
   return (

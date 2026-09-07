@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Users, BookOpen, Trophy, TrendingUp, Calendar, Award, Activity, Target } from 'lucide-react';
+import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip,  ResponsiveContainer } from 'recharts';
+import { Users, Trophy,  Activity, Target } from 'lucide-react';
 
 const StatisticParticipant = () => {
   // Sample data - dalam implementasi nyata, data ini akan diambil dari API
@@ -30,17 +30,18 @@ const StatisticParticipant = () => {
       const currentDate = new Date();
       const filterDate = new Date();
       
-      switch (selectedPeriod) {
-        case 'month':
-          filterDate.setMonth(currentDate.getMonth() - 1);
-          break;
-        case 'quarter':
-          filterDate.setMonth(currentDate.getMonth() - 3);
-          break;
-        case 'year':
-          filterDate.setFullYear(currentDate.getFullYear() - 1);
-          break;
-      }
+        // eslint-disable-next-line default-case
+        switch (selectedPeriod) {
+          case 'month':
+            filterDate.setMonth(currentDate.getMonth() - 1);
+            break;
+          case 'quarter':
+            filterDate.setMonth(currentDate.getMonth() - 3);
+            break;
+          case 'year':
+            filterDate.setFullYear(currentDate.getFullYear() - 1);
+            break;
+        }
       
       filtered = filtered.filter(p => new Date(p.joinDate) >= filterDate);
     }

@@ -10,13 +10,10 @@ import {
   BookOpen, 
   Users, 
   Calendar, 
-  CheckCircle, 
   Activity, 
   Clock,
   TrendingUp,
-  Star,
   ArrowRight,
-  Zap,
   UserPlus,
   Award
 } from 'lucide-react';

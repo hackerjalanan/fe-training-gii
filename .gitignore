@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 /build
-.env
+.env.local
 # /.pnp
 # .pnp.js
 

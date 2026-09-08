@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import {  } from '../../../service/master-data.service';
 import { updateReportSchedule, dropdownMeeting, dropdownTypeReport, fetchReportScheduleList } from '../../../service/report-schedule.service';
 
@@ -26,7 +26,7 @@ const ReportScheduleUpdate = ({ trainingSesiId, reportScheduleId, onClose, onSuc
     }
   };
 
-  const fetchExistingData = async () => {
+  const fetchExistingData = useCallback(async () => {
     if (!reportScheduleId) return;
 
     try {
@@ -65,13 +65,13 @@ const ReportScheduleUpdate = ({ trainingSesiId, reportScheduleId, onClose, onSuc
     } finally {
       setInitialLoading(false);
     }
-  };
+  }, [reportScheduleId, trainingSesiId]);
 
   useEffect(() => {
     if (reportScheduleId && trainingSesiId) {
       fetchExistingData();
     }
-  }, [reportScheduleId, trainingSesiId]);
+  }, [fetchExistingData]);
 
 
   useEffect(() => {

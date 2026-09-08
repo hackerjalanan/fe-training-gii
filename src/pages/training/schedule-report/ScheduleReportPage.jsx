@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Plus, Eye, Edit, Trash2, Search, Filter, RefreshCw, ChevronDown, ChevronUp, Calendar, X } from 'lucide-react';
+import { Plus, Edit, Trash2, Search, ChevronDown, ChevronUp, Calendar, X } from 'lucide-react';
 import { fetchReportScheduleList, deleteReportSchedule } from '../../../service/report-schedule.service';
 import { fetchTrainingSesi } from '../../../service/master-data.service'; // Sesuaikan path
 import Swal from 'sweetalert2';
@@ -46,7 +46,6 @@ const ScheduleReportPage = () => {
   
   // State for popup modals
   const [selectedReportScheduleId, setSelectedReportScheduleId] = useState(null);
-  const [showDetailPopup, setShowDetailPopup] = useState(false);
   const [showAddReportSchedulePopup, setShowAddReportSchedulePopup] = useState(false);
 
   // Load Training Sesi Info - separate function
@@ -149,7 +148,7 @@ const ScheduleReportPage = () => {
       loadTrainingSesiInfo();
       loadReportScheduleData();
     }
-  }, [loadTrainingSesiInfo, loadReportScheduleData]);
+  }, [loadTrainingSesiInfo, loadReportScheduleData, trainingSesiId]);
 
   // Function to handle filter application
   const applyFilters = () => {
@@ -223,18 +222,6 @@ const ScheduleReportPage = () => {
   const handleUpdateClick = (reportScheduleId) => {
     setSelectedReportScheduleId(reportScheduleId);
     setShowUpdateForm(true);
-  };
-
-  // Function to handle report schedule detail click
-  const handleReportScheduleClick = (reportScheduleId) => {
-    setSelectedReportScheduleId(reportScheduleId);
-    setShowDetailPopup(true);
-  };
-  
-  // Function to close detail popup
-  const handleClosePopup = () => {
-    setShowDetailPopup(false);
-    setSelectedReportScheduleId(null);
   };
 
   // Function to handle delete report schedule click

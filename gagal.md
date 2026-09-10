@@ -1,26 +1,14 @@
-10:25:34.263 
-10:25:34.263 
-src/pages/training/schedule-report/ScheduleReportPage.jsx
-10:25:34.263 
-  Line 2:16:   'Eye' is defined but never used                                                                                    no-unused-vars
-10:25:34.263 
-  Line 2:43:   'Filter' is defined but never used                                                                                 no-unused-vars
-10:25:34.263 
-  Line 2:51:   'RefreshCw' is defined but never used                                                                              no-unused-vars
-10:25:34.263 
-  Line 49:10:  'showDetailPopup' is assigned a value but never used                                                               no-unused-vars
-10:25:34.263 
-  Line 152:6:  React Hook useEffect has a missing dependency: 'trainingSesiId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
-10:25:34.263 
-  Line 229:9:  'handleReportScheduleClick' is assigned a value but never used                                                     no-unused-vars
-10:25:34.263 
-  Line 235:9:  'handleClosePopup' is assigned a value but never used                                                              no-unused-vars
-10:25:34.263 
-10:25:34.263 
-src/pages/training/schedule-report/ScheduleReportUpdate.jsx
-10:25:34.263 
-  Line 74:6:  React Hook useEffect has a missing dependency: 'fetchExistingData'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
-10:25:34.263 
-10:25:34.269 
-10:25:34.356 
-Error: Command "npm run build" exited with 1
+Running build in Washington, D.C., USA (East) – iad1
+Build machine configuration: 2 cores, 8 GB
+Cloning github.com/hackerjalanan/fe-training-gii (Branch: main, Commit: 6ee8850)
+Previous build caches not available.
+Cloning completed: 345.000ms
+Running "vercel build"
+Vercel CLI 59.11.7
+Installing dependencies...
+npm warn deprecated whatwg-encoding@1.0.5: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+npm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
